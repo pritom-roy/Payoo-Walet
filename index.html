@@ -5,16 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script/color-font.js"></script>
 
-    <script src="script/login.js"></script>
 </head>
 
-<body>
-    <h1 class="text-secondary">hello world</h1>
+<body class="bg-gray-100">
+    <div class="flex h-screen flex-col justify-center items-center">
+        <div class="mb-2">
+            <img src="images/payoo.png" alt="logo" class="h-11 w-11">
+        </div>
+        <h1 class="text-center mb-5 font-bold font-outfit text-3xl">Payoo Wallet</h1>
+        <form id="loginForm" class="h-80 w-[402px] bg-white rounded-2xl p-8">
+            <div class="flex flex-col">
+                <label for="phone-number" class="text-base font-bold pb-3">Mobile Number</label>
+                <input required type="text" name="mobileNumber" id="phone-number"
+                    class="bg-gray-100 w-auto h-11 rounded-xl p-2 focus:ring-black focus:ring-1 focus:outline-none"
+                    placeholder="1234">
+            </div>
+            <div class="flex flex-col my-4">
+                <label for="pin-number" class="text-base font-bold pb-3">4 Digit Pin</label>
+                <input required type="password" name="passCode" id="pin-number"
+                    class="bg-gray-100 w-auto h-11 rounded-xl p-2 focus:ring-black focus:ring-1 focus:outline-none"
+                    placeholder="1234">
+            </div>
+            <div class="bg-secondary rounded-xl flex items-center justify-center mt-8">
+                <button id="button-login" type="submit"
+                    class="text-white font-bold text-[20px] h-11 w-full">Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="script/login.js"></script>
+    <script src="script/color-font.js"></script> <!-- Script at the end of body -->
 </body>
 
 </html>
